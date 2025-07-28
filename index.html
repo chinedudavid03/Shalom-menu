@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shalom Catering Services</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <section>
+      <header>
+        <div class="logo">
+          <img src="logo.png" alt="logo" />
+        </div>
+        <h1>Shalom Catering Services</h1>
+        <p>Where We Turn Meals Into Moments And Every Bite Feels Like Home.</p>
+        <p>
+          We Don't Just Cook We Bring The Taste Of Home To Your Table One
+          Traditional Dish At A Time!!
+        </p>
+      </header>
+    </section>
+
+    <div class="container">
+      <div class="menu" id="menu"></div>
+      <div class="cart">
+        <h1>Your Plate</h1>
+        <ul id="cart"></ul>
+        <p class="total">Total: #<span id="total">0</span></p>
+        <button onclick="submitOrder()">Submit Order</button>
+        <button id="PrintOrder">Print Order</button>
+        <div class="button">
+          <i class="bi bi-dash-lg"></i>
+          <div class="quantity">0</div>
+          <i class="bi bi-plus-lg"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
