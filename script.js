@@ -1,13 +1,40 @@
 const meals = [
-  { name: "Jollof Rice", price: 1500, Image: "Jollof Rice.jpeg" },
-  { name: "Abacha", price: 1500, Image: "Abacha.jpeg" },
-  { name: "Isi Ewu", price: 1500, Image: "Isi Ewu.jpeg" },
-  { name: "Okpa", price: 1500, Image: "Okpa.jpeg" },
-  { name: "Ogbono Soup", price: 1500, Image: "Ogbono Soup.jpeg" },
+  {
+    name: "Jollof Rice",
+    description: "asdfghjkldfghj",
+    price: 1500,
+    Image:
+      "https://raw.githubusercontent.com/chinedudavid03/Shalom-menu/image/jollof-rice.jpeg",
+  },
+  {
+    name: "Abacha",
+    description: "asdfghjkldfghj",
+    price: 1500,
+    Image: "image/abacha.jpeg",
+  },
+  {
+    name: "Isi Ewu",
+    description: "asdfghjkldfghj",
+    price: 1500,
+    Image: "image/isi-ewu.jpeg",
+  },
+  {
+    name: "Okpa",
+    description: "asdfghjkldfghj",
+    price: 1500,
+    Image: "image/okpa.jpeg",
+  },
+  {
+    name: "Ogbono Soup",
+    description: "asdfghjkldfghj",
+    price: 1500,
+    Image: "image/ogbono-soup.jpeg",
+  },
   {
     name: "Roasted Yam & Plantain",
+    description: "asdfghjkldfghj",
     price: 1500,
-    Image: "Roasted Yam & Plantain.jpeg",
+    Image: "image/roasted-yam-plantain.jpeg",
   },
 ];
 
@@ -19,8 +46,9 @@ function rendermenu() {
     const mealDiv = document.createElement("div");
     mealDiv.classList.add("meal");
     mealDiv.innerHTML = `
-    <img scr= "${meal.image}" alt="${meal.name}" />
-    <h3> ${meal.name}</h3>
+    <img scr= "${meal.Image}" alt="${meal.name}" />
+    <h2> ${meal.name}</h2>
+    <h4> ${meal.description}</h4>
     <p>#${meal.price}</p>
     <button onClick="addToCart(${index})">Add to Plate</button>
     `;
