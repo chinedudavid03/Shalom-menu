@@ -10,35 +10,35 @@ const meals = [
   {
     name: "Abacha",
     description: "Ezeagu Abacha A delightful mouth-watering delicacy.",
-    price: 1500,
+    price: 1200,
     Image: "image/abacha.jpeg",
   },
   {
     name: "Isi Ewu",
     description:
       "Spicy goat head delicacy, perfectly seasoned with native herbs and hot peppers. A favorite among pepper lovers!",
-    price: 1500,
+    price: 5000,
     Image: "image/isi-ewu.jpeg",
   },
   {
     name: "Okpa",
     description:
       "Nutritious Bambara nut pudding, steamed to perfection. A protein-rich delicacy from the Eastern part of Nigeria.",
-    price: 1500,
+    price: 500,
     Image: "image/okpa.jpeg",
   },
   {
     name: "Ogbono Soup",
     description:
       "Rich, hearty soup made with ground ogbono seeds, assorted meat, and fresh vegetables. Perfect with any swallow of your choice.",
-    price: 1500,
+    price: 800,
     Image: "image/ogbono-soup.jpeg",
   },
   {
     name: "Roasted Yam & Plantain",
     description:
       "Fresh yam and ripe plantain, roasted to golden perfection. Served with spicy pepper sauce and choice of protein.",
-    price: 1500,
+    price: 2000,
     Image: "image/roasted-yam-plantain.jpeg",
   },
 ];
@@ -57,7 +57,7 @@ function rendermenu() {
     <img src="${meal.Image}" alt="${meal.name}" />
     <h2> ${meal.name}</h2>
     <h4> ${meal.description}</h4>
-    <p>#${meal.price}</p>
+    <p>₦${meal.price}</p>
     <button onClick="addToCart(${index})">Add to Plate</button>
     `;
     menu.appendChild(mealDiv);
@@ -107,7 +107,7 @@ function updateCart() {
         <span class="quantity">${item.quantity}</span>
         <button class="plus" onclick="addToCart(${item.mealIndex})">+</button>
       </div>
-      <span class="item-total">#${item.price * item.quantity}</span>
+      <span class="item-total">₦${item.price * item.quantity}</span>
     `;
     cart.appendChild(li);
     totalAmount += item.price * item.quantity;
